@@ -1,0 +1,24 @@
+msgid ""
+msgstr ""
+"POT-Creation-Date: 2015-04-06 07:04:+0000\n"
+"Project-Id-Version: Translation Test\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2015-04-06 20:08-0000\n"
+"Last-Translator: Anthony Hastings <ar.hastings@gmail.com>\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Language: fr\n"
+
+#: js/src/main.js:46
+msgid "Hello world."
+msgstr "Bonjour le monde."
+
+#: js/src/main.js:53
+msgid "You have %1$d new message."
+msgid_plural "You have %1$d new messages."
+msgstr[0] "Vous avez %1$d nouveau message."
+msgstr[1] "Vous avez %1$d nouveaux messages."

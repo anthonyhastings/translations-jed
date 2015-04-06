@@ -1,0 +1,19 @@
+{
+   "domain": "messages",
+   "locale_data": {
+      "messages": {
+         "": {
+            "domain": "messages",
+            "plural_forms": "nplurals=2; plural=(n != 1);",
+            "lang": "de"
+         },
+         "Hello world.": [
+            "Hallo Welt."
+         ],
+         "You have %1$d new message.": [
+            "Sie haben %1$d neue Nachricht.",
+            "Sie haben %1$d neue Nachrichten."
+         ]
+      }
+   }
+}

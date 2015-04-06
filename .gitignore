@@ -1,0 +1,9 @@
+node_modules
+locales/*.pot
+.DS_Store
+Thumbs.db
+.sass-cache
+.*.sw[a-z]
+
+# Distribution folder that has build files aren't repo controlled.
+dist/
