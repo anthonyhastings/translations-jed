@@ -5,7 +5,7 @@ This is done via `JSpot` whose options can be seen with the following command:
 ```node_modules/.bin/jspot extract --help```
 
 The command that should be used is as follows:
-```node_modules/.bin/jspot extract --target=./locales ./js/src/main.js```
+```node_modules/.bin/jspot extract --keyword=i18n --target=./locales ./js/src/*.js ./js/src/*.hbs```
 
 
 
@@ -17,6 +17,8 @@ NOTE: May need to update catalogue settings live... POEdit gets confused and doe
 
 
 ### Converting `.po` catalogs into `.json` catalogs
+
+```gulp po2json```
 
 
 

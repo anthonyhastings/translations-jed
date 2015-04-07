@@ -4,10 +4,12 @@
 var Ajax = require('simple-ajax'),
     apiPrefix = 'http://localhost:4000/api/',
     i18nHelper = require('./utils/i18n-helper'),
+    testTemplate = require('./test.hbs'),
     greetingElement = document.querySelector('.js-greeting'),
     languageElement = document.querySelector('.js-select-language'),
     messageCountElement = document.querySelector('.js-message-count'),
-    messageElement = document.querySelector('.js-messages');
+    messageElement = document.querySelector('.js-messages'),
+    templateContainerElement = document.querySelector('.js-template-container');
 
 /**
  *  Retrieves the language files that match the language code.
@@ -54,11 +56,13 @@ function setLanguage(langCode) {
             i18nHelper.i18n = new i18nHelper.Jed(data);
             setGreeting();
             setMessage();
+            setTemplate();
         },
         function(rawData) {
             i18nHelper.i18n = new i18nHelper.Jed({});
             setGreeting();
             setMessage();
+            setTemplate();
         }
     );
 }
@@ -98,6 +102,17 @@ function setMessage() {
 }
 
 /**
+ *  Updates the DOM with a handlebars template that outputs
+ *  sentences via `gettext`, `ngettext` and `sprintf`.
+ */
+function setTemplate() {
+    templateContainerElement.innerHTML = testTemplate({
+        total_people: 2,
+        total_messages: 1
+    });
+}
+
+/**
  *  Whenever the language selection changes, trigger update
  *  logic to change accordingly.
  *
@@ -119,5 +134,7 @@ messageCountElement.addEventListener('keyup', function(event) {
     setMessage();
 });
 
+// Ensure starting sentences are output.
 setGreeting();
 setMessage();
+setTemplate();

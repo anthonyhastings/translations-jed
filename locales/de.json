@@ -13,6 +13,13 @@
          "You have %1$d new message.": [
             "Sie haben %1$d neue Nachricht.",
             "Sie haben %1$d neue Nachrichten."
+         ],
+         "A simple string.": [
+            "Eine einfache Zeichenkette."
+         ],
+         "There is a person.": [
+            "Es ist eine Person.",
+            "Es gibt Menschen."
          ]
       }
    }

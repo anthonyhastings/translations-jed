@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2015-04-06 07:04:+0000\n"
+"POT-Creation-Date: 2015-04-07 08:34:+0000\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -9,12 +9,22 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 
-#: ./js/src/main.js:46
+#: ./js/src/main.js:75
 msgid "Hello world."
 msgstr ""
 
-#: ./js/src/main.js:53
+#: ./js/src/main.js:90 ./js/src/test.hbs:8
 msgid "You have %1$d new message."
 msgid_plural "You have %1$d new messages."
+msgstr[0] ""
+msgstr[1] ""
+
+#: ./js/src/test.hbs:2
+msgid "A simple string."
+msgstr ""
+
+#: ./js/src/test.hbs:5
+msgid "There is a person."
+msgid_plural "There are people."
 msgstr[0] ""
 msgstr[1] ""
