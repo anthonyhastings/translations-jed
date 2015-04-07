@@ -1,0 +1,20 @@
+msgid ""
+msgstr ""
+"POT-Creation-Date: 2015-04-06 07:04:+0000\n"
+"Project-Id-Version: PACKAGE VERSION\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+
+#: ./js/src/main.js:46
+msgid "Hello world."
+msgstr ""
+
+#: ./js/src/main.js:53
+msgid "You have %1$d new message."
+msgid_plural "You have %1$d new messages."
+msgstr[0] ""
+msgstr[1] ""

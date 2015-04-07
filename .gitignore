@@ -1,5 +1,4 @@
 node_modules
-locales/*.pot
 .DS_Store
 Thumbs.db
 .sass-cache
