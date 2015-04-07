@@ -1,13 +1,9 @@
 'use strict';
 
-// Loading dependencies.
+// Loading dependencies, caching selectors and defining other variables.
 var Ajax = require('simple-ajax'),
-    Jed = require('jed');
-
-// Caching selectors and other variables.
-var apiPrefix = 'http://localhost:4000/api/',
-    translationStore = {},
-    i18n = new Jed({}),
+    apiPrefix = 'http://localhost:4000/api/',
+    i18nHelper = require('./utils/i18n-helper'),
     greetingElement = document.querySelector('.js-greeting'),
     languageElement = document.querySelector('.js-select-language'),
     messageCountElement = document.querySelector('.js-message-count'),
@@ -22,8 +18,8 @@ var apiPrefix = 'http://localhost:4000/api/',
  */
 function getTranslations(langCode) {
     return new Promise(function(resolve, reject) {
-        if (translationStore.hasOwnProperty(langCode)) {
-            resolve(translationStore[langCode]);
+        if (i18nHelper.store.hasOwnProperty(langCode)) {
+            resolve(i18nHelper.store[langCode]);
         } else {
             var ajax = new Ajax({
                 method: 'GET',
@@ -31,8 +27,8 @@ function getTranslations(langCode) {
             });
 
             ajax.on('success', function(event, data) {
-                translationStore[langCode] = JSON.parse(data);
-                resolve(translationStore[langCode]);
+                i18nHelper.store[langCode] = JSON.parse(data);
+                resolve(i18nHelper.store[langCode]);
             });
 
             ajax.on('error', function(event, data) {
@@ -55,12 +51,12 @@ function setLanguage(langCode) {
 
     translationsRequest.then(
         function(data) {
-            i18n = new Jed(data);
+            i18nHelper.i18n = new i18nHelper.Jed(data);
             setGreeting();
             setMessage();
         },
         function(rawData) {
-            i18n = new Jed({});
+            i18nHelper.i18n = new i18nHelper.Jed({});
             setGreeting();
             setMessage();
         }
@@ -69,9 +65,10 @@ function setLanguage(langCode) {
 
 /**
  *  Updates the DOM with the appropriate greeting.
+ *  This demonstrates a standard translation via `gettext`.
  */
 function setGreeting() {
-    var greetingTranslation = i18n.gettext('Hello world.');
+    var greetingTranslation = i18nHelper.i18n.gettext('Hello world.');
     greetingElement.innerHTML = greetingTranslation;
 }
 
@@ -86,13 +83,13 @@ function setMessage() {
     var inputValue = messageCountElement.value
     inputValue = parseInt(inputValue.trim(), 10) || 0;
 
-    var correctPluralTranslation = i18n.ngettext(
+    var correctPluralTranslation = i18nHelper.i18n.ngettext(
         'You have %1$d new message.',
         'You have %1$d new messages.',
         inputValue
     );
 
-    var variableReplacedTranslation = Jed.sprintf(
+    var variableReplacedTranslation = i18nHelper.Jed.sprintf(
         correctPluralTranslation,
         inputValue
     );
