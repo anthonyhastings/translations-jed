@@ -12,7 +12,7 @@ We are able to extract all of these strings and generate a `.pot` file from them
 
 Use the command below to generate the `.pot` file:
 
-```node_modules/.bin/jspot extract --target=./locales ./js/src/main.js```
+```node_modules/.bin/jspot extract --keyword=i18n --target=./locales ./js/src/*.js ./js/src/*.hbs```
 
 ## Creating `.po` catalogues from the `.pot` file
 
