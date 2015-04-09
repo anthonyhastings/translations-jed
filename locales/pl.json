@@ -14,6 +14,14 @@
             "Masz %1$d nową wiadomość.",
             "Masz %1$d nowe wiadomości.",
             "Masz %1$d nowych wiadomości."
+         ],
+         "A simple string.": [
+            "Prosty łańcuch."
+         ],
+         "There is a person.": [
+            "Jest osobą.",
+            "Są ludzie.",
+            "Są ludzie."
          ]
       }
    }

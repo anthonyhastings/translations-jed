@@ -28,6 +28,6 @@ The library is unable to directly read a `.po` file so it must be converted into
 
 ## Using the API
 
-To serve the `.json` catalogues to the front-end, an API has been made to retrieve them. Ensure it is running before trying out this demo. It can be run with the following command:
+To serve the `.json` catalogues to the front-end, an API has been made to retrieve them. Ensure it is running before trying out this demo. It can be run with the following command (from inside `./api/`):
 
-```node api/index.js```
+```node index.js```
