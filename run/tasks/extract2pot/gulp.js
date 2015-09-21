@@ -16,7 +16,7 @@ var gulp = require('gulp'),
     glob = require('glob'),
     jspot = require('jspot');
 
-gulp.task('extract2pot', function (done) {
+gulp.task('extract2pot', function() {
     glob('./js/src/**/!(i18n-helper).+(js|hbs)', null, function(error, files) {
         jspot.extract({
             keyword: 'i18n',
