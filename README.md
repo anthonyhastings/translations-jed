@@ -26,8 +26,18 @@ The library is unable to directly read a `.po` file so it must be converted into
 
 ```gulp po2json```
 
-## Using the API
+## Running the application
 
-To serve the `.json` catalogues to the front-end, an API has been made to retrieve them. Ensure it is running before trying out this demo. It can be run with the following command (from inside `./api/`):
+To run the application, run the following:
 
-```node index.js```
+```
+gulp build;
+gulp server;
+```
+
+You will also (in a separate thread / terminal) need to run the API which acts as a file server to serve the `.json` catalogues. Ensure it is running before trying out this demo. It can be run with the following command (from inside `./api/`):
+
+```
+cd api;
+node index.js
+```
