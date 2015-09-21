@@ -6,13 +6,11 @@
 # Usage
 
 ## Extracting strings into a `.pot` file
-Ideally we will have English references to our translations dotted throughout our client-side code base. These references could be found in JavaScript source files as well as templating library files such as `.hbs` files.
+Ideally we will have English references to our translations dotted throughout our client-side code base. These references could be found in JavaScript source files as well as template files such as `.hbs` files.
 
-We are able to extract all of these strings and generate a `.pot` file from them. This is done via a module known as `JSPot`. It is intelligent enough to know the difference between a standard 1:1 translation and a translation with plurals, ensuring the `.pot` file is output correctly.
+We are able to extract all of these strings and generate a `.pot` file from them. This is done via a module known as `JSPot`. It is intelligent enough to know the difference between a standard 1:1 translation and a translation with plurals, ensuring the `.pot` file is output correctly. I have written a wrapper method which will traverse all `.js` and `.hbs` source files.
 
-Use the command below to generate the `.pot` file:
-
-```node_modules/.bin/jspot extract --keyword=i18n --target=./locales ./js/src/*.js ./js/src/*.hbs```
+```gulp extract2pot```
 
 ## Creating `.po` catalogues from the `.pot` file
 
