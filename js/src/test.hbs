@@ -6,3 +6,6 @@
 <br />
 {{! Handlebars sub-expression of plural string translation, then a sprintf variable replacement. }}
 {{ sprintf (i18n_ngettext 'You have %1$d new message.' 'You have %1$d new messages.' total_messages) total_messages }}
+<br />
+<button>{{ i18n_pgettext 'actions' 'OK' }}</button>
+<button>{{ i18n_pgettext 'statements' 'OK' }}</button>

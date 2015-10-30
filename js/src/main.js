@@ -9,6 +9,8 @@ var Ajax = require('simple-ajax'),
     languageElement = document.querySelector('.js-select-language'),
     messageCountElement = document.querySelector('.js-message-count'),
     messageElement = document.querySelector('.js-messages'),
+    okActionContextElement = document.querySelector('.js-ok-action'),
+    okStatementContextElement = document.querySelector('.js-ok-statement'),
     templateContainerElement = document.querySelector('.js-template-container');
 
 /**
@@ -57,12 +59,14 @@ function setLanguage(langCode) {
             setGreeting();
             setMessage();
             setTemplate();
+            setContextButtons();
         },
         function(rawData) {
             i18nHelper.i18n = new i18nHelper.Jed({});
             setGreeting();
             setMessage();
             setTemplate();
+            setContextButtons();
         }
     );
 }
@@ -113,6 +117,16 @@ function setTemplate() {
 }
 
 /**
+ * Updating the two buttons in the DOM with output from
+ * `pgettext` which has the same translation key but in
+ * different contexts.
+ */
+function setContextButtons() {
+    okActionContextElement.innerHTML = i18nHelper.i18n.pgettext('actions', 'OK');
+    okStatementContextElement.innerHTML = i18nHelper.i18n.pgettext('statements', 'OK');
+}
+
+/**
  *  Whenever the language selection changes, trigger update
  *  logic to change accordingly.
  *
@@ -138,3 +152,4 @@ messageCountElement.addEventListener('keyup', function(event) {
 setGreeting();
 setMessage();
 setTemplate();
+setContextButtons();

@@ -20,6 +20,12 @@
          "There is a person.": [
             "Es ist eine Person.",
             "Es gibt Menschen."
+         ],
+         "actions\u0004OK": [
+            "OK (Action)"
+         ],
+         "statements\u0004OK": [
+            "OK (Statement)"
          ]
       }
    }
