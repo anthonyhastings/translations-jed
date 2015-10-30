@@ -36,6 +36,18 @@ Handlebars.registerHelper('i18n_ngettext', function() {
 });
 
 /**
+ *  A handlebars wrapper for `pgettext`.
+ *
+ *  Example Usage:
+ *  {{ i18n_pgettext 'actions' 'OK' }}
+ *
+ *  @return {string}.
+ */
+Handlebars.registerHelper('i18n_pgettext', function() {
+    return helper.i18n.pgettext.apply(helper.i18n, Array.prototype.slice.call(arguments, 0, arguments.length - 1));
+});
+
+/**
  *  A handlebars wrapper for `sprintf`.
  *
  *  Example Usage:

@@ -1,23 +1,23 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Translation Test\n"
-"POT-Creation-Date: 2015-04-07 08:34:+0000\n"
-"PO-Revision-Date: 2015-04-07 21:36-0000\n"
-"Last-Translator: Anthony Hastings <ar.hastings@gmail.com>\n"
+"POT-Creation-Date: 2015-10-30 12:44:+0000\n"
+"PO-Revision-Date: 2015-10-30 12:47-0000\n"
+"Last-Translator: Anthony Hastings <anthony@rehabstudio.com>\n"
 "Language-Team: \n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.5.4\n"
+"X-Generator: Poedit 1.7.5\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: js/src/main.js:75
+#: js/src/main.js:79
 msgid "Hello world."
 msgstr "Hallo Welt."
 
-#: js/src/main.js:90 js/src/test.hbs:8
+#: js/src/main.js:94 js/src/test.hbs:8
 msgid "You have %1$d new message."
 msgid_plural "You have %1$d new messages."
 msgstr[0] "Sie haben %1$d neue Nachricht."
@@ -32,3 +32,13 @@ msgid "There is a person."
 msgid_plural "There are people."
 msgstr[0] "Es ist eine Person."
 msgstr[1] "Es gibt Menschen."
+
+#: js/src/main.js:123
+msgctxt "actions"
+msgid "OK"
+msgstr "OK (Action)"
+
+#: js/src/main.js:124
+msgctxt "statements"
+msgid "OK"
+msgstr "OK (Statement)"

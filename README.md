@@ -1,6 +1,7 @@
 # Terminology
 * `gettext` - Translates a chosen string.
 * `ngettext` - A plural version of `gettext` which uses an integer to determine whether or not to use a singular or plural version of a translation.
+* `pgettext` -  A contextual version of `gettext`. Translation keys can be prefixed so you can have the same translation but in different contexts i.e. "OK" the response to a statement, and "OK" the action of clicking a button.
 * `sprintf` - Formats a string and replaces placeholders with variables.
 
 # Usage
