@@ -27,7 +27,7 @@ router.use(function(request, response, next) {
 
 // Route: Sends back locale specific data.
 router.get('/translations/:localeCode', function(request, response) {
-    fs.readFile('../locales/' + request.params.localeCode + '.json', function(error, data) {
+    fs.readFile('./locales/' + request.params.localeCode + '.json', function(error, data) {
         response.type('application/json');
         response.send((error) ? '{ "error": "File not found." }' : data);
     });

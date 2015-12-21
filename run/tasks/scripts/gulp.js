@@ -83,6 +83,7 @@ function _processBundle(resolve, reject) {
     bundleStream
         .add(self.srcPath + self.fileName + '.js')
         .transform('hbsfy')
+        .transform('babelify', { presets: ['es2015'] })
         .bundle()
         .on('error', function(error) {
             console.log('Browserify Failed: ' + error.message);
