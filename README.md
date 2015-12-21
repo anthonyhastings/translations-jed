@@ -30,13 +30,11 @@ The library is unable to directly read a `.po` file so it must be converted into
 To run the application, run the following:
 
 ```
-gulp build;
-gulp server;
+gulp build && gulp server;
 ```
 
-You will also (in a separate thread / terminal) need to run the API which acts as a file server to serve the `.json` catalogues. Ensure it is running before trying out this demo. It can be run with the following command (from inside `./api/`):
+You will also (in a separate thread / terminal) need to run the API which acts as a file server to serve the `.json` catalogues. Ensure it is running before trying out this demo. It can be run with the following command:
 
 ```
-cd api;
-node index.js
+node api/index.js
 ```
