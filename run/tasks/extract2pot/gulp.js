@@ -20,8 +20,10 @@ gulp.task('extract2pot', function() {
     glob('./js/src/**/!(i18n-helper).+(js|hbs)', null, function(error, files) {
         jspot.extract({
             // Falafel / Acorn settings.
-            ecmaVersion: 6,
-            sourceType: 'module',
+            parserOptions: {
+                ecmaVersion: 6,
+                sourceType: 'module'
+            },
 
             // JSPot settings.
             keyword: 'i18n',
