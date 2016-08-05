@@ -70,7 +70,7 @@ function _processBundle(resolve, reject) {
     }
 
     // Creating a browserify instance / stream.
-    var bundleStream = browserify({ debug: true });
+    var bundleStream = browserify();
 
     // If this bundle is asking to explicitly exclude certain modules, do so.
     if (self.excludes && self.excludes.length > 0) {
